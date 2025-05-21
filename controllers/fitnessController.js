@@ -27,7 +27,7 @@ exports.getFitnessLogs = async (req, res) => {
   userId = userId.trim(); 
 
   if (!mongoose.Types.ObjectId.isValid(userId)) {
-    console.log("Invalid userId format");
+  
     return res.status(400).json({ message: "Invalid user ID format" });
   }
 
